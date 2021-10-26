@@ -8,13 +8,13 @@ def creeaza_vanzare(id, titlucarte, gencarte, pret, tipreducere):
     :param tipreducere: Un string ales din : NONE, SILVER sau GOLD.
     :return: Returneaza un dictionare ce reprezinta o vanzare.
     """
-    return{
-        "id": id,
-        "titlu": titlucarte,
-        "gen": gencarte,
-        "pret": pret,
-        "reducere": tipreducere
-    }
+    return[
+        id,
+        titlucarte,
+        gencarte,
+        pret,
+        tipreducere
+    ]
 
 
 def get_id(vanzare):
@@ -23,7 +23,7 @@ def get_id(vanzare):
     :param vanzare: Dictionarul ce contine o vanzare.
     :return: Returneaza ID-ul vanzarii.
     """
-    return vanzare["id"]
+    return vanzare[0]
 
 
 def get_titlu_carte(vanzare):
@@ -32,7 +32,7 @@ def get_titlu_carte(vanzare):
     :param vanzare: Dictionarul ce contine o vanzare.
     :return: Returneaza titlul cartii vandute.
     """
-    return vanzare["titlu"]
+    return vanzare[1]
 
 
 def get_gen_carte(vanzare):
@@ -41,7 +41,7 @@ def get_gen_carte(vanzare):
     :param vanzare: Dictionarul ce contine o vanzare.
     :return: Returneaza genul cartii vandute.
     """
-    return vanzare["gen"]
+    return vanzare[2]
 
 
 def get_pret(vanzare):
@@ -50,7 +50,7 @@ def get_pret(vanzare):
     :param vanzare: Dictionarul ce contine o vanzare.
     :return: Returneaza pretul vanzarii.
     """
-    return vanzare["pret"]
+    return vanzare[3]
 
 
 def get_tip_reducere(vanzare):
@@ -59,7 +59,7 @@ def get_tip_reducere(vanzare):
     :param vanzare:
     :return:
     """
-    return vanzare["reducere"]
+    return vanzare[4]
 
 
 def to_string(vanzare):
