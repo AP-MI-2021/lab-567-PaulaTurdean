@@ -13,6 +13,15 @@ def test_adauga_vanzare():
     assert get_tip_reducere(get_by_id("1", lista)) == "silver"
 
 
+def test_get_by_id():
+    lista = []
+    lista = adauga_vanzare("1", "Carrie", "Nuvela-Horror", 70, "silver", lista)
+    lista = adauga_vanzare("2", "5 saptamani in balon", "Aventura", 49.9, "none", lista)
+
+    assert get_by_id("2", lista) == ["2", "5 saptamani in balon", "Aventura", 49.9, "none"]
+    assert get_by_id("3", lista) is None
+
+
 def test_sterge_vanzare():
     lista = []
     lista = adauga_vanzare("1", "Carrie", "Nuvela-Horror", 70, "silver", lista)
