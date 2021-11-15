@@ -12,7 +12,7 @@ O vânzare conține: ID, titlu carte, gen carte, preț, tip reducere client (non
 """
 from LOGIC.c_r_u_d import adauga_vanzare
 from TESTS.test_all import run_all_tests
-from USERINTERFACE.consola import run_menu
+from USERINTERFACE.consola import run_program
 
 
 def main():
@@ -22,8 +22,11 @@ def main():
     lista = adauga_vanzare("2", "5 saptamani in balon", "Aventura", 49.9, "none", lista)
     lista = adauga_vanzare("3", "Tata sarac tata bogat", "Economie", 80, "gold", lista)
     lista = adauga_vanzare("4", "Cum sa iti reinventezi viata?", "Psihologie", 104.99, "gold", lista)
-    lista = adauga_vanzare("5", "Game of Thornes", "S.F. mitologic", 100, "none", lista)
-    run_menu(lista)
+    lista = adauga_vanzare("5", "Game of Thrones", "S.F. mitologic", 100, "none", lista)
+    lista = adauga_vanzare("6", "Ocolul pamantului in 80 de zile", "Aventura", 55.6, "silver", lista)
+    lista = adauga_vanzare("7", "Arta manipularii", "Psihologie", 95.0, "none", lista)
+    lista = adauga_vanzare("8", "5 saptamani in balon", "Aventura", 39.9, "silver", lista)
+    run_program(lista)
 
 
 main()
